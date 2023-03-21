@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <math.h>
+
+void getVolunteer(){
+    int num, k = 0;
+    float cont = 0, *contPtr = &cont;
+
+    printf("Numero de voluntarios: ");
+    scanf("%d", &num);
+
+    struct volunteer{
+        double weight, height, sum;
+        int age;
+    }vol[num];
+
+    for(int i = 0; i < num; i++){
+        printf("\nIdade: ");
+        scanf("%d", &vol[i].age);
+
+        printf("Altura: ");
+        scanf("%f", &vol[i].height);
+
+        printf("Peso: ");
+        scanf("%f", &vol[i].weight);
+
+        float* heightPtr = &vol[i].height;
+        float* weitghtPtr = &vol[i].weight;
+
+        vol[i].sum = (*weitghtPtr / pow(*heightPtr,2));
+
+    }
+
+    while(k < num){
+        cont += vol[k].sum;
+
+        k++;
+
+    }
+
+    cont = (cont / num);
+
+    printf("\nMedia dos IMCs : %.1f\n", *contPtr);
+
+}
+
+int main(){
+
+    getVolunteer();
+
+    return 0;
+}
