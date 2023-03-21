@@ -1,0 +1,7 @@
+# Ponteiro X Classe
+
+Apesar de a linguagem C não ser orientada a objeto, há nela uma estrutura que se assemelha bastante a uma classe.
+À primeira vista o pragramador pode supor que "struct" e "class" são a mesma coisa, porém há um grande contraste entre elas.
+Dentre os pricipais, a struct não pode conter uma instancia de si mesma, já na classe temos o construtor, que, por padrão, começa vazio.
+E além disso a struct não guarda o tipo que são os seus membros, ela apenas reserva espaço na memória para eles, algo que não ocorre em 
+linguagens orientada a objetos.
