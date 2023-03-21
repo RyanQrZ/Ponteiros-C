@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+
+  struct pacient{
+    char *name;
+    int age;
+    char *occupation;
+    char *priority;
+  }p1, *pacientPtr;
+
+void getStruct(pacient){
+    printf("Idade: ");
+    scanf("%d", &p1.age);
+
+    printf("\nNome: ");
+    scanf("%s", &p1.name);
+
+    printf("\nProfissao: ");
+    scanf("%s", &p1.occupation);
+
+    int* agePtr = &p1.age;
+    char* occupationPtr = &p1.occupation;
+    int isTrue = strcmp(&p1.occupation,"medico"); // so com med por enquanto.
+
+    if(*agePtr >= 60){
+        p1.priority = "ALTA";
+    }
+    else if(isTrue == 0){
+        p1.priority = "ALTA";
+    }
+    else{
+        p1.priority = "DESCONHECIDO";
+    }
+
+    printf("\nPrioridade: %s\n", p1.priority);
+
+}
+
+int main(){
+
+    getStruct();
+
+    return 0;
+}
