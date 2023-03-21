@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+void List(){
+
+    int nFun, i = 0, k = 0;
+    float nSal[nFun];
+
+    scanf("%d", &nFun);
+
+    //Start!
+
+    for(i; i < nFun; i++){
+        float value;
+
+        scanf("%f", &value);
+
+        nSal[i] = (0.92 * value);
+
+    }
+
+    //setList
+
+    do{
+        float *nSalPtr;
+
+        nSalPtr = &nSal[k];
+
+        printf("Worker(%d): %.2f\n", (k+1), *nSalPtr);
+
+        k++;
+
+    }while(k < nFun);
+
+}
+
+int main(){
+
+    List();
+
+    return 0;
+}
